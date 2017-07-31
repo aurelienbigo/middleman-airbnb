@@ -1,0 +1,9 @@
+- user_id: 1
+  name: 'Lyon'
+  picture: 'lyon.jpg'
+- name: 'Lille'
+  picture: 'images/lille.jpg'
+- name: 'Paris'
+  picture: 'images/paris.jpg'
+
+

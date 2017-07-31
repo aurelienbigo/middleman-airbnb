@@ -2,14 +2,27 @@
 title: Le Wagon - Middleman
 ---
 
-<div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1>Welcome to Airbnb</h1>
+    <p>Find the perfect flat for the your next travel</p>
+    <a class="btn btn-primary btn-lg">Start now</a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% data.cities.each do |city| %>
+      <div class="col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path city.picture %>');">
+          <h2><%= city.name %></h2>
+        </div>
+          <div class="card-description">
+            <h2>Nice flat</h2>
+            <p>Very cool place, useful and smart</p>
+          </div>
+      </div>
+    <% end %>
   </div>
 </div>
